@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "py-grpc-test"
+version = "0.1.0"
+description = ""
+authors = ["Davin K. Tanabe <gitter@pelebyte.net>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+grpcio = [
+    { markers = "platform_machine != 'arm64'", version = "1.46.3" },
+    { markers = "platform_machine == 'arm64'", url = "https://files.pythonhosted.org/packages/61/dd/d8eda79197a1275e06621850775c7bbf34a141ff92553754dde4e87d7551/grpcio-1.46.3.tar.gz" }
+]
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
